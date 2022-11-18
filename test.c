@@ -6,7 +6,7 @@
 /*   By: cpalusze <cpalusze@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 11:47:24 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/11/16 11:59:53 by cpalusze         ###   ########.fr       */
+/*   Updated: 2022/11/18 20:39:59 by test_user        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 
-int	main(int argc, char *argv)
+int	main(int argc, char **argv)
 {
 	char	*file_path;
 	char	*output;
