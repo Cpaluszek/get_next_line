@@ -29,7 +29,15 @@ int	main(int argc, char **argv)
 		printf("Can't open file : %s\n", file_path);
 		return (-1);
 	}
-	output = get_next_line(fd);
-	printf("output = %s\n", output);
+	else
+		printf("file open on %d\n", fd);
+	while (1)
+	{
+		output = get_next_line(fd);
+		if (output == NULL)
+			break ;
+		printf("output = %s\n", output);
+	}
+	close(fd);
 	return (0);
 }
