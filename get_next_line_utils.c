@@ -6,23 +6,11 @@
 /*   By: cpalusze <cpalusze@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 10:46:56 by cpalusze          #+#    #+#             */
-/*   Updated: 2022/11/19 11:46:43 by cpalusze         ###   ########.fr       */
+/*   Updated: 2022/11/23 12:32:20 by cpalusze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-char	*ft_strchr(const char *s, int c)
-{
-	char	ch;
-
-	ch = (unsigned char) c;
-	while (*s && *s != ch)
-		s++;
-	if (*s == ch)
-		return ((char *)s);
-	return (NULL);
-}
 
 size_t	ft_strlen(const char *s)
 {
@@ -89,13 +77,13 @@ char	*ft_strdup(const char *str)
 
 	i = 0;
 	len = ft_strlen(str);
-	copy = malloc(sizeof(char) * len + 1);
+	copy = malloc(sizeof(char) * (len + 1));
 	if (copy == NULL)
 		return (NULL);
-	while (i < len)
+	while (str[i] && i < len)
 	{
-			copy[i] = str[i];
-			i++;
+		copy[i] = str[i];
+		i++;
 	}
 	copy[i] = 0;
 	return (copy);
